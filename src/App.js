@@ -21,42 +21,36 @@ const App = () => {
   useEffect(() => {}, []);
   return (
     <div className="app">
-      <div className="container">
-        <h1 className="container__title">Films Web</h1>
-        <div className="container__box">
-          <div className="container__box__form">
-            <input
-              className="search"
-              placeholder="Search..."
-              value={SearchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
-            ></input>
-            <button
-              className="btn"
-              onClick={() => {
-                searchMovie(SearchTerm);
-              }}
-            >
-              {searchIcon}
-            </button>
-          </div>
-
-          {movies?.length > 0 ? (
-            <div className="container__cards">
-              {movies.map((movies) => (
-                <Cards movie={movies} />
-              ))}
-              <Cards movie={movies} />
-            </div>
-          ) : (
-            <div className="empty">
-              <h2>No movies Found</h2>
-            </div>
-          )}
-        </div>
+      <h1 className="container__title">Films Web</h1>{" "}
+      <div className="container__box__form">
+        <input
+          className="search"
+          placeholder="Search..."
+          value={SearchTerm}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        ></input>
+        <button
+          className="btn"
+          onClick={() => {
+            searchMovie(SearchTerm);
+          }}
+        >
+          {searchIcon}
+        </button>
       </div>
+      {movies?.length > 0 ? (
+        <div className="container__cards">
+          {movies.map((movies) => (
+            <Cards movie={movies} />
+          ))}
+        </div>
+      ) : (
+        <div className="empty">
+          <h2>No movies Found</h2>
+        </div>
+      )}
     </div>
   );
 };
