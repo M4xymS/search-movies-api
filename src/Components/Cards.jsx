@@ -5,7 +5,15 @@ const Cards = ({ movie }) => {
     <div className="container__cards movie">
       <div className="container__cards-card">
         <div className="container__cards-card-image">
-          <img src={movie.Poster} alt={movie.Title} />
+          <img
+            src={
+              //if movie has Poster use it, else use placeholder
+              movie.Poster === "N/A"
+                ? "https://via.placeholder.com/300x450"
+                : movie.Poster
+            }
+            alt={movie.Title}
+          />
           <div className="container__cards-card-content">
             <h2 className="container__cards-card-content-title">
               <a href="www.google.com">{movie.Title}</a>
