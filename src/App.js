@@ -20,7 +20,6 @@ const App = () => {
     console.log(data.Search);
   };
 
-  useEffect(() => {}, [searchMovie]);
   return (
     <div className="app">
       <h1 className="container__title">Films Web</h1>{" "}
