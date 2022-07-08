@@ -22,7 +22,9 @@ const Cards = ({ movie }) => {
 
           <div className="container__cards-card-content">
             <h2 className="container__cards-card-content-title">
-              <a href={googleSearch}>{movie.Title}</a>
+              <a href={googleSearch} target="_blank">
+                {movie.Title}
+              </a>
             </h2>
             <p className="container__cards-card-content-description">
               {movie.Type}, {movie.Year}
