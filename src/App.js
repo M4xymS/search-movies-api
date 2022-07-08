@@ -15,9 +15,10 @@ const App = () => {
   const searchMovie = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-
-    setMovies(data.Search);
+    console.log(data);
+    setMovies(data);
   };
+  searchMovie();
   useEffect(() => {}, []);
   return (
     <div className="app">
@@ -40,7 +41,7 @@ const App = () => {
           {searchIcon}
         </button>
       </div>
-      {movies?.length > 0 ? (
+      {movies.length > 0 ? (
         <div className="container__cards">
           {movies.map((movies) => (
             <Cards movie={movies} />
@@ -48,7 +49,7 @@ const App = () => {
         </div>
       ) : (
         <div className="empty">
-          <h2>No movies Found</h2>
+          <h2>No movies in our library.</h2>
         </div>
       )}
     </div>

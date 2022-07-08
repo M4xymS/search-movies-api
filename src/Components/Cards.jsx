@@ -7,7 +7,6 @@ const Cards = ({ movie }) => {
         <div className="container__cards-card-image">
           <img
             src={
-              //if movie has Poster use it, else use placeholder
               movie.Poster === "N/A"
                 ? "https://via.placeholder.com/300x450"
                 : movie.Poster
@@ -19,8 +18,9 @@ const Cards = ({ movie }) => {
               <a href="www.google.com">{movie.Title}</a>
             </h2>
             <p className="container__cards-card-content-description">
-              {movie.Year}
+              {movie.Year}, {movie.Type}
             </p>
+            <p>{movie.Rated}</p>
           </div>
         </div>
       </div>
