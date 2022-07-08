@@ -77,6 +77,15 @@ body {
   border: 1px solid #e6e6e6;
   margin: 15px;
 }
+.container__cards-favorite {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
 .container__cards-card-image img {
   width: 100%;
   border-radius: 10px;

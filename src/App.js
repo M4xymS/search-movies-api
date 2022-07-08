@@ -43,7 +43,7 @@ const App = () => {
         </button>
       </div>
       {movies?.length > 0 ? (
-        <div className="container__cards">
+        <div className="container__cards c">
           {movies.map((movie) => (
             <Cards movie={movie} />
           ))}
