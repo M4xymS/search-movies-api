@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cards from "./Components/Cards";
 
 const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=245ae77d";
@@ -19,7 +19,7 @@ const App = () => {
     setMovies(data.Search);
     console.log(data.Search);
   };
-
+  // useEffect(() => {}, [searchMovie]);
   return (
     <div className="app">
       <h1 className="container__title">Films Web</h1>{" "}
