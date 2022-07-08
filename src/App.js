@@ -5,7 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Cards from "./Components/Cards";
 
-const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=245ae77d";
+const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=245ae77d";
 const searchIcon = <FontAwesomeIcon icon={faSearch} />;
 
 const App = () => {
