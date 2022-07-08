@@ -18,9 +18,8 @@ const Cards = ({ movie }) => {
               <a href="www.google.com">{movie.Title}</a>
             </h2>
             <p className="container__cards-card-content-description">
-              {movie.Year}, {movie.Type}
+              {movie.Type}, {movie.Year}
             </p>
-            <p>{movie.Rated}</p>
           </div>
         </div>
       </div>
